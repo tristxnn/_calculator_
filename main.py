@@ -14,5 +14,6 @@ bmi = int(lbsConversion / float(ftConversion * ftConversion))
 round(bmi, 2)
 print("")
 print(f"Your BMI is {bmi}")
+print("")
 
-input("Press enter to exit")
+input("     Press enter to exit!")
