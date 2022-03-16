@@ -1,28 +1,27 @@
-print("Welcome to the ticket booth!")
+print("Welcome to the basic calculator!")
 print("")
-height = int(input("What is your height in cm?: " ))
-bill = 0
-
-if height >= 120:
-    print("You can ride the rollercoaster!")
-    print("")
-    age = int(input("What is your age?: " ))
-    if age < 12:
-        bill = 5
-        print("Child tickets are $5.")
-    elif age <= 18:
-        bill = 7
-        print("Youth tickets are $7.")
+cont = input("Would you like to continue? Y/N: ").lower()
+if cont == "y":
+    first = input("Great! What is your first number?: ")
+    second = input("Awesome! What is your second number?: ")
+    op = input("What operator would you like to use? +, -, *, / ?: ")
+    if op == "+":
+        add = int(first) + int(second)
+        print(f"{first} + {second} = {add}!")
+    elif op == "-":
+        subtract = int(first) - int(second)
+        print(f"{first} - {second} = {subtract}!")
+    elif op == "*":
+        multiply = int(first) * int(second)
+        print(f"{first} * {second} = {multiply}!")
+    elif op == "/":
+        divide = int(first) / int(second)
+        print(f"{first} / {second} = {divide}!")
     else:
-        bill = 12
-        print("Adult tickets are $12.")
+        print("Invalid!")
 
-    photo = input("Would you like a photo taken? Y or N. ")
-    if photo == "Y" or "y":
-        bill += 3
-
-    print(f"Your ticket cost is {bill}")
-
+elif cont == "n":
+    quit()
 else:
-    print("Sorry! You do not meet the height requirement for this ride.")
-
+    print("That is an invalid answer!")
+    quit()
